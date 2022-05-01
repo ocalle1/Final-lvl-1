@@ -1,0 +1,23 @@
+{
+  "name": "fff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ocalle1/Final-lvl-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ocalle1/Final-lvl-1/issues"
+  },
+  "homepage": "https://github.com/ocalle1/Final-lvl-1#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}

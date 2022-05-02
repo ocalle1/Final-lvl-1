@@ -7,7 +7,7 @@ console.log(`Welcome, ${playerName}, to the jungle, we got fun and games.`);
 const start = readline.keyIn(`${playerName} please press 1 to start`, { limit: '$<1>' });
 let pressStart = false;
 if (start == 1) {
-    console.log("\n You're standing in the middle of the Amazon forest.");//fix write something better
+    console.log("\n You're standing in the middle of the Amazon forest.");
     pressStart = true;
 }
 
@@ -19,16 +19,16 @@ let userHealth = 100;
 let killNum = 0;
 
 function hungerGames() {
-    // The while loop allows a code to be executed repeatedly depend ing the given boolean conditions.
+    // The while loop allows a code to be executed repeatedly depending on the given boolean conditions.
     while (pressStart == true && userHealth > 0) {
 
         // Assigned Variables
-        let pickUp = treasure[Math.floor(Math.random() * treasure.length)];//Math.floor - gives largest less than integer - 5.95 = 5 or 5.05 = 5;
-        let enemyHealth = Math.floor(Math.random() * 100);
         const attackPower = Math.floor(Math.random() * (30 + 15 - 3) + 15);
+        let enemyHealth = Math.floor(Math.random() * 100);
         const enemy = enemies[Math.floor(Math.random() * enemies.length)];
         const enemyPower = Math.floor(Math.random() * (20 + 20 - 2) + 12);
-        //const heal = Math.floor(Math.random() * 70 + 1);
+        let pickUp = treasure[Math.floor(Math.random() * treasure.length)];//Math.floor - gives largest less than integer - 5.95 = 5 or 5.05 = 5;
+       
 
         //Action option
         const perform = readline.keyIn("What would you like to do? \nPress 'w' to walk. \nPress 'p' to print stats. \nPress 'x' to quit the game.", { limit: '$<w, p, x>' });
@@ -43,9 +43,8 @@ function hungerGames() {
             console.log(` \nName: ${playerName} \nHealth ${userHealth} \nKills: ${killNum} \nItems: ${inventory}`);
         }
         else if (perform == 'w') {
-            //hasHealed = false;
             let randomize = Math.random();
-            if (randomize >= 0.26) {
+            if (randomize >= 0.50) {
                 console.log("you're walking in the jungle.");
             }
             else if (randomize <= 0.50) {
@@ -84,7 +83,7 @@ function hungerGames() {
                         }
                         if (userHealth <= 0) {
                             console.log(`The ${enemy} has slain you! ${playerName} is dead!`);
-                            console.log(`\n~~ ${playerName}'s Final Stats ~~ \nName: ${playerName} \nHealth: ${userHealth} \nKills: ${killNum} \nItems:${inventory} \n------------------------------------`);
+                            console.log(`\n~~ ${playerName}'s Final Stats ~~ \nName: ${playerName} \nHealth: ${userHealth} \nKills: ${killNum} \nItems:${inventory} \n`);
                             break;
                         }
                     }
